@@ -1,0 +1,62 @@
+linux github client install
+1、安装
+$yum install git
+
+2、creat SSH 密钥
+$ssh-keygen -t rsa -C "your email address"
+连续3个回车，得到两个文件，所在路径：/root/.ssh
+3、添加密钥到github
+打开 Github，登录自己的账号后
+点击自己的头像->settings->SSH And GPG Keys->New SSH key
+将本地 id_rsa.pub 中的内容粘贴到 Key 文本框中，随意输入一个 title(不要有中文)，点击 Add Key 即可
+4、测试
+$ ssh git@github.com
+键入yes后回车，如果出现You’ve successfully authenticated,
+验证成功
+
+git常用命令以供使用：
+
+git clone <address>：复制代码库到本地；
+
+git clone https://github.com/nuaalybin/github.git 自动创建目录github
+默认在主分支
+
+git add <file> ...：添加文件到代码库中；
+git add .  ----添加当前路径下文件到代码库
+
+git rm <file> ...：删除代码库的文件；
+
+git commit -m <message>：提交更改，在修改了文件以后，使用这个命令提交修改。
+git commit -m "first commit for github"
+
+git pull：从远程同步代码库到本地。
+
+git push：推送代码到远程代码库。
+
+git branch：查看当前分支。带*是当前分支。
+
+git branch <branch-name>：新建一个分支。
+
+git branch -d <branch-name>：删除一个分支。
+
+git checkout <branch-name>：切换到指定分支。
+
+git log：查看提交记录（即历史的 commit 记录）。
+
+git status：当前修改的状态，是否修改了还没提交，或者那些文件未使用。
+
+git reset <log>：恢复到历史版本。
+
+
+
+
+
+--------------------- 
+
+作者：Coder-LiyG 
+
+来源：CSDN 
+
+原文：https://blog.csdn.net/u014066037/article/details/70224780 
+
+版权声明：本文为博主原创文章，转载请附上博文链接！
